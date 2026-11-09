@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Personal_Projects_Manager.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Personal Projects Manager">
+
+    <!-- Placeholder tabs until ProjectsPage / OverviewPage exist (build order step 3 / 7). -->
+    <TabBar>
+        <ShellContent Title="Projects" Route="projects">
+            <ContentPage Title="Projects">
+                <Label Text="Projects page coming soon"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </ContentPage>
+        </ShellContent>
+
+        <ShellContent Title="Overview" Route="overview">
+            <ContentPage Title="Overview">
+                <Label Text="Overview page coming soon"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center" />
+            </ContentPage>
+        </ShellContent>
+    </TabBar>
+
+</Shell>

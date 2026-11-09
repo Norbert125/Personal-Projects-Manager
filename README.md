@@ -38,14 +38,14 @@ Break each project into steps, break each step into todos, tick them off, and se
 ### Run
 
 1. Clone the repository.
-2. Open `PersonalProjectsManager.sln` in Visual Studio.
+2. Open `Personal Projects Manager/Personal Projects Manager.slnx` in Visual Studio.
 3. Pick a target in the toolbar: **Windows Machine**, or an Android emulator/device.
 4. Press **F5**.
 
 ## Project structure
 
 ```
-PersonalProjectsManager/
+Personal Projects Manager/
 ├── Models/        Project, Step, Todo, and progress calculation
 ├── Services/      Database (SQLite access)
 ├── ViewModels/    one per page
