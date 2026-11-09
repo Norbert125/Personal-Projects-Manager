@@ -1,0 +1,38 @@
+# --- Claude / AI tooling (never committed) ---
+CLAUDE.md
+CLAUDE.local.md
+architecture.md
+.claude/
+.vibe-wise/
+.sensible-vibes/
+.base/
+.base-ast/
+graphify-out/
+
+# --- Visual Studio / .NET ---
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.rsuser
+.idea/
+*.DotSettings.user
+
+# --- MAUI / platform build output ---
+*.apk
+*.aab
+AppPackages/
+BundleArtifacts/
+*.msix
+*.appx
+
+# --- Local data ---
+*.db3
+*.db3-shm
+*.db3-wal
+
+# --- OS ---
+Thumbs.db
+.DS_Store
