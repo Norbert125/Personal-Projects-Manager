@@ -8,15 +8,17 @@ Break each project into steps, break each step into todos, tick them off, and se
 
 ## Features
 
-- **Projects** with a name, description, status (Idea / Active / Paused / Done), priority, and due date
-- **Steps** inside each project, each with notes
+- **Projects** with a name, description, status (Idea / Active / Paused / Done), priority, and an optional due date
+- **Steps** inside each project, each with notes and an optional due date
 - **Todos** inside each step, each with an optional due date
 - **Progress tracking**: completed todos roll up into a per-step count and a per-project progress bar
+- **Due dates** shown as "Due in 3 days" / "2 days overdue"
+- **Reminders**: notifications 1 week and 1 day before a due date, plus one when something becomes overdue (while the app is running)
 - **Drag & drop** to reorder steps and todos, or move a todo to another step
 - **Overview tab**: overdue items, active projects, and stats at a glance
 - **Safe deletes**: deleting a project needs a confirmation plus typing `Delete <project name>`
 - **Fully offline**: all data lives in a local SQLite database on your device
-- Light and dark theme
+- Light and dark theme, English UI
 
 ## Tech stack
 
@@ -46,8 +48,9 @@ Break each project into steps, break each step into todos, tick them off, and se
 
 ```
 Personal Projects Manager/
-├── Models/        Project, Step, Todo, and progress calculation
-├── Services/      Database (SQLite access)
+├── Models/        Project, Step, Todo, deadlines, progress and date helpers
+├── Services/      Database (SQLite access), reminders and notifications
+├── Platforms/     Android- and Windows-specific code (notifications)
 ├── ViewModels/    one per page
 ├── Views/         XAML pages
 └── Resources/     styles, colors, icons, fonts
@@ -55,4 +58,6 @@ Personal Projects Manager/
 
 ## Data
 
-The database file `projects.db3` is stored in the app's private data folder. Uninstalling the app (especially on Android) deletes all data. There is no backup or export yet.
+The database file `projects.db3` is created by the app on first launch, in its private data folder. Nothing needs to be installed: SQLite is bundled with the app. Uninstalling the app (especially on Android) deletes all data. There is no backup or export yet.
+
+On Android 13+, the app asks for permission to show reminder notifications on first launch.
